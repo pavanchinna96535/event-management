@@ -17,13 +17,13 @@ const Register = () => {
         messageApi.info("User already exists,Please login!");
         
       }
-      else{
-        message.success('Registration successful! Please log in.');
-      }
+    
+      message.success('Registration successful! Please log in.');
+    
       
       setTimeout(()=>{
         navigate("/"); 
-      },2000)
+      },1200)
       
     } catch (err) {
       
