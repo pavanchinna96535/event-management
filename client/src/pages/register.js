@@ -13,14 +13,17 @@ const Register = () => {
   const onFinish = async (values) => {
     try {
       const res=await axios.post('/auth/register', values);
-      if(!res.data.success){
+      if(res?.data?.success===false){
         messageApi.info("User already exists,Please login!");
         
       }
-      message.success('Registration successful! Please log in.');
+      else{
+        message.success('Registration successful! Please log in.');
+      }
+      
       setTimeout(()=>{
         navigate("/"); 
-      },3000)
+      },2000)
       
     } catch (err) {
       
