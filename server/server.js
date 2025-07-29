@@ -8,7 +8,12 @@ const authRoutes=require("./Routes/authRoutes");
 const eventRoutes=require("./Routes/eventRoutes");
 const registrationRoutes=require("./Routes/registrationRoutes");
 const stripeRoutes=require("./Routes/stripeRoutes");
-app.use(cors());
+
+app.use(cors({
+    origin:"https://event-management-gules-one.vercel.app/",
+    credentials:true,
+}));
+
 app.use(express.json());
 
 // exposing routes from server
