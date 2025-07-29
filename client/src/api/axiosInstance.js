@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8000/api', 
+  baseURL: 'https://mlanadtuskers.onrender.com/api', 
 });
 axiosInstance.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
