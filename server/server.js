@@ -10,7 +10,7 @@ const registrationRoutes=require("./Routes/registrationRoutes");
 const stripeRoutes=require("./Routes/stripeRoutes");
 
 app.use(cors({
-    origin:"https://event-management-gules-one.vercel.app/",
+    origin:"https://event-management-gules-one.vercel.app",
     credentials:true,
 }));
 
